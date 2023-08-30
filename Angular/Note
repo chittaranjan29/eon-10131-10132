@@ -1,0 +1,33 @@
+Typescript - tsc -v
+Node - node -v
+Npm  - npm -v
+Angular
+i)latest version   - npm install -g @angular/cli
+ii)specific version - npm install -g @angular/cli@10.0.1
+
+version checking: ng v / ng version
+
+create app: ng new first-angular-app
+
+cd first-angular-app
+
+start the server: ng serve  / ng serve -open
+Angular JS/ Angular:
+First version of Angular: Angular JS 1.0 - Javascript - October, 2010
+Second Version of Angular: Angular 2.0 - Typescript - 2016
+
+Angular is a open source frontend framework written using typescript.
+Angular is maintained by Google.
+It is used to create Single Page Application.(SPA)
+It is used for mobile and desktop application.
+It uses typescript and HTML to build app.
+It comes with every feature that you need to create a complex and sophisticated web or
+mobile application. 
+It is component based and modular in nature.
+Angular is loaded with features like components, directives, Forms, pipes, HTTP service, Dependency Injection etc.  
+
+
+
+index.html
+
+Business - home, aboutus, service, contact us etc.
