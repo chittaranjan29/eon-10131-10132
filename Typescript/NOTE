@@ -1,0 +1,42 @@
+i) Class
+ii) Constructor
+iii) this
+iv) Methods
+v)  
+
+Optional Property:
+
+Inheritance :
+Reusablity
+
+Employee - salaryCal(), leaveCalculation(), incentiveCalculation() 
+
+Manager Developer Designer
+
+Getters and Setters:
+
+private properties
+
+arrow function:
+Arrow function is used to define anonymous function.
+It is also called lambda function.
+ES6 supports arrow function.
+
+syntax: (par1, par2, par3,...) => {expression};
+
+ES5:
+
+var getResult=function(userName,points){
+    return username +" "+points; 
+}
+
+
+
+Es6:
+
+var getResult:(userName:string, points:number):string=>{
+    return userName + " "+points;
+}
+
+
+
