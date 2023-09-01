@@ -1,6 +1,7 @@
 Typescript - tsc -v
-Node - node -v
+Node - node -v (18)
 Npm  - npm -v
+
 Angular
 i)latest version   - npm install -g @angular/cli
 ii)specific version - npm install -g @angular/cli@10.0.1
@@ -11,7 +12,7 @@ create app: ng new first-angular-app
 
 cd first-angular-app
 
-start the server: ng serve  / ng serve -open
+start the server: ng serve  / ng serve -o
 Angular JS/ Angular:
 First version of Angular: Angular JS 1.0 - Javascript - October, 2010
 Second Version of Angular: Angular 2.0 - Typescript - 2016
@@ -21,8 +22,7 @@ Angular is maintained by Google.
 It is used to create Single Page Application.(SPA)
 It is used for mobile and desktop application.
 It uses typescript and HTML to build app.
-It comes with every feature that you need to create a complex and sophisticated web or
-mobile application. 
+It comes with every feature that you need to create a complex and sophisticated web or mobile application. 
 It is component based and modular in nature.
 Angular is loaded with features like components, directives, Forms, pipes, HTTP service, Dependency Injection etc.  
 
@@ -31,3 +31,63 @@ Angular is loaded with features like components, directives, Forms, pipes, HTTP 
 index.html
 
 Business - home, aboutus, service, contact us etc.
+Component: It is the smallest part of the UI.
+
+Every angular app by default comes with one component and one module.
+
+app module
+app component(app.component.ts, app.component.html, app.component.css, app.component.spec.ts)
+
+Module: A module contains related functionalities in the form of
+components, directives, pipes etc.
+
+
+User Authentication
+i)Signup
+ii)login
+iii)authorization
+iv)Authentication
+v)token generation
+vi)forgot password
+
+admin 
+i)add product
+ii)manage user
+iii)allow/block user.
+
+
+Bootstrapping(loading) process of angular:
+
+i)Loads index.html
+ii)Load all the third party libraries and modules.
+iii)Excutes application entry point(main.ts).
+iv)Load & execute root module.(app.module.ts)
+v) Executes the root component.(app.component.ts)
+vi)Displays the template of the root component.(app.component.html)
+
+command to create a component:
+ng generate component login
+ng g c login
+
+Project Structure:
+i)node_modules: This folder contains all the trird party libraries and files. This folder is generated when we run "npm install" command.
+
+ii)src: This folder contains all the source code of the project.
+It contains modules, components, directives etc.
+
+iii)App : It contains "modules" and "components".
+iv)assets: This folder contains all the static resources of the project.
+pictures, videos, logos, js libraries, css libraries etc. 
+v)favicon : icon of the app.
+vi)index.html: The basic html file.
+vii)main.ts: It is the starting point of our application. Form this file 
+angular comes to know about root module.
+viii)style.css: It is the global css file.
+ix).editorconfig: Editor configuration like whitespaces or indentation.
+x).gitignore: info about files and folders that are need be ignored in git push.
+
+xi)angular.json: It defines the structure of the application.
+xii)package.json:It contains npm configuration.All the dependencies are mentioned in this file.
+xii)package-lock.json:Wheneven any chages made to the package.json file automatically package-lock.json created. This file is associated with npm.
+xiii)Readme.md: It contains project description.
+ix) tsconfig.json : It contains compiler configuration.
