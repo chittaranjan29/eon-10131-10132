@@ -1,0 +1,6 @@
+<p>parent counter value {{counter}}</p>
+<br>
+<input type="button" (click)="incrementCounter()" value="increase">
+<input type="button" (click)="decrementCounter()" value="decrease">
+<br>
+<app-child [count]=counter></app-child>

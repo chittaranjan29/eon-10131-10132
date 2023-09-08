@@ -5,6 +5,7 @@ Npm  - npm -v
 Angular
 i)latest version   - npm install -g @angular/cli
 ii)specific version - npm install -g @angular/cli@10.0.1
+iii)uninstall - npm uninstall -g @angular/cli
 
 version checking: ng v / ng version
 
@@ -91,3 +92,130 @@ xii)package.json:It contains npm configuration.All the dependencies are mentione
 xii)package-lock.json:Wheneven any chages made to the package.json file automatically package-lock.json created. This file is associated with npm.
 xiii)Readme.md: It contains project description.
 ix) tsconfig.json : It contains compiler configuration.
+
+ng g c login
+
+i)Component without stylesheet
+  ng g c a --inline-style
+ii)Component without template
+  ng g c b --inline-template
+iii)Component without template and stylesheet
+  ng g c c --inline-template --inline-style
+
+
+  add new component -> in a module
+  new component must be registered with the module
+
+Data Binding:  
+Data binding is a technique in which the data stays in sync between the
+component and the view(template).
+
+When angular gets new data it updates the view.
+wheneven user updates the data in the view, Angular updates the component.
+              data
+component   <------> view
+(.ts)               (.html)
+
+i)One way data binding:
+In one way data binding the data flows from view to component or from 
+component to view.
+    a)Interpolation(String expession/template expression)
+     {{expression}}
+
+
+    b)property binding 
+    Property binding is one way as values go from the component to the template.
+    When the component value changes, the angular updates the view. But if the value 
+    changes in the view, angular does not update the component.
+
+    syntax: [binding-source]=binding-target
+
+    
+    c)event binding 
+    Event binding allows us to bind events such as keystroke, click, hover, touch etc to a method in the component. 
+
+    syntax: (target-event)="TemplateStatement"
+
+
+
+    css style
+    d)class binding
+    e)style binding
+    f)attribute binding
+Event: ($event payload)
+DOM events carries the event payload i.e. the information about the event.
+We can access the event payload by using $event as an argument in the handler function.
+
+
+ii)Two way data binding:
+In two way data binding the changes made to our model in the component are propagated to the view and any changes made in the view are 
+immediately updated in the component.
+ a)ngModel - directive
+
+ import formsModule
+
+ Two way data binding= event binding + property binding
+   ()  + [] = [()]
+
+Directives:
+Directives helps us to manipulate the DOM. You can change the appearance, behavior or
+layout of the dom element using directive.
+
+i)Structural:Structural directives can change the DOM structure by adding or removing
+DOM elements. All structural directives are preceded by Asterix(*) symbol.
+
+ex: *ngFor, *ngIf, *ngSwitch
+
+ngFor: Iterates over a collection of data like an array or list.
+ngIf: ngIf is a structural directive that allows us to add or remove element based on condition.
+ngSwitch:It is also a structural directive works in conjunction with ngSwitchCase and ngSwitchDefault.
+
+ii)Attribute: Attribute directives helps us to change the appearance or behavior of an element.
+
+ex: ngClass, ngStyle
+ngClass: 
+iii)Component: Component are special directive in Angular. They are the directive with a template.
+
+ngTemplate: You can define template content that is only rendered by angular.
+A
+ B
+
+C ---> D
+
+
+
+Component communication:
+Sharing data from one component to another component.
+i)Parent Component to a Child component.(@Input decorator)
+ii)Child to a parent component.(@Output, EventEmitter )
+iii)Between unrelated component.(Service, subjectBehavior)
+
+EventEmitter: Eventemitter is a tool that allows components to communicate with each other and it plays an important role in managing communication and state within angular application.
+
+there are two ways of detecting when input changes in the child component in Angular
+i)Using OnChanges life cycle hook
+ii)using Input setter
+
+How to use ngOnChanges for Change Detection
+Import the OnChanges interface, SimpleChanges, SimpleChange from @angule/core library.
+Implement the ngOnChanges() method. The method receives the SimpleChanges object containing the changes in each input property.
+
+In the child component:
+
+1. Declare a property of type EventEmitter and instantiate it.
+2. Mark it with @Output decorator
+3. Raise the event passing it with the desired data
+
+In the parent component:
+ 1. bind to the child component using event binding and listen to the child event
+ 2. Define the event handler function
+
+
+
+
+
+
+
+
+
+

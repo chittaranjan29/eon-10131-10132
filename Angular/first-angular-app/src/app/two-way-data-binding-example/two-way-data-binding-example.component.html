@@ -1,0 +1,9 @@
+<input type="text" [value]="name" (input)=getData($event)>
+<p>{{name}}</p>
+<button (click)="clear()">clear</button>
+
+<br><br><br>
+
+<input type="text" name="v" [(ngModel)]="v">
+<p>{{v}}</p>
+<button (click)="clearvalue()">Clear</button>

@@ -1,0 +1,39 @@
+
+<div *ngFor="let student of students">
+    <p>{{student.id}}</p>
+    <p>{{student.name}}</p>
+</div>
+
+<div *ngIf="status; else myblock">
+    <p>This is a paragraph</p>
+</div>
+
+<ng-template #myblock>
+    <p>This is else part</p>
+</ng-template>
+
+
+<div *ngIf="status==true;then a else b">
+</div>
+
+<ng-template #a>
+    <p>This is if part</p>
+</ng-template>
+
+<ng-template #b>
+    <p>This is else part</p>
+</ng-template>
+
+
+<div [ngSwitch]="choice">
+
+    <p *ngSwitchCase="1">case 1</p>
+    <p *ngSwitchCase="2">case 2</p>
+    <p *ngSwitchCase="3">case 3</p>
+    <p *ngSwitchCase="4">case 4</p>
+    <p *ngSwitchDefault>default case</p>
+    
+</div>
+
+<p [ngClass]="'primary secondary'">paragraph 1</p>
+<p [ngStyle]="{'font-size':'30px', 'color':'purple'}">paragraph2</p>
