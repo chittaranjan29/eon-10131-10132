@@ -7,6 +7,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { DemoComponent } from './demo/demo.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ServiceComponent } from './service/service.component';
+import { ErrorComponent } from './error/error.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +21,14 @@ import { NavbarComponent } from './navbar/navbar.component';
     HeaderComponent,
     FooterComponent,
     MainContentComponent,
-    NavbarComponent
+    NavbarComponent,
+    DemoComponent,
+    ContactComponent,
+    AboutUsComponent,
+    ServiceComponent,
+    ErrorComponent,
+    EmployeeComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,

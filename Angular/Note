@@ -211,6 +211,80 @@ In the parent component:
  2. Define the event handler function
 
 
+ Services:
+ Services are reusable business logic that can be used in various components of the application.
+
+ Dependency Injection: It is a desing pattern that helps us to make our code loosly coupled.
+       Injectable
+ Service -> Component 
+
+ command: ng g s app
+
+ - .ts
+ - .spec.ts
+
+
+
+ng new second-angular-app
+
+Producer <-> subscriber
+
+BehaviorSubject:
+ BehaviorSubjects are types of subject  that 
+    i)has an initial value
+    ii)Subscribers will receive the last emitted value upon subscription.
+
+
+Routing: 
+Routing allows us to move for one part of the application to another part or from one view to another view.
+
+app-routing.module.ts
+
+Router: An Angular router is a service that enables navigation from one component to another.
+
+Route: Route tells the Angular router which view to display when a user clicks on a particular URL.
+
+/about - aboutComponent
+/contact - contactComponent
+
+
+Routes: Routes is an array of route.
+
+RouterOutlet: It is a directive that works as a placeholder, where the router should display in the view.
+
+RouterLink: it is a directive that binds the html element to the Route.
+
+RouterLinkActive
+
+Activatedroute: The activatedroute is an object that represents the 
+currently activated route associated with the loaded component.
+
+snapshot: It is a property that current value of the route.
+The snapshot has paramsMap and params array. You can use any of them 
+to read the value of id.
+RouterState
+
+Parameters:
+i)URI parameter
+ii)Query/Request Parameter
+
+
+http://localhost:4200/employee/123
+http://abc.com/service/2/emp/6373
+
+http://localhost:4200/employee?name=kunal&email=test@gmail.com&dept=it
+
+
+{'path':'employee/:id'}
+{'path':'/service/:sid/emp/:id'}
+
+routerLink="/employee/3434"
+
+browser url -> component
+      
+student componet -> employee component
+
+
 
 
 
