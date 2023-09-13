@@ -14,6 +14,8 @@ import { ServiceComponent } from './service/service.component';
 import { ErrorComponent } from './error/error.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { StudentComponent } from './student/student.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,10 @@ import { StudentComponent } from './student/student.component';
     ServiceComponent,
     ErrorComponent,
     EmployeeComponent,
-    StudentComponent
+    StudentComponent,
+    ProductsComponent,
+    ProductDetailComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -285,6 +285,35 @@ browser url -> component
 student componet -> employee component
 
 
+Child routing:
+In angular application we can redirect user form parent route to child route through the child routing feature.
+
+A  - /testa 
+ B - 
+ProductList = /products
+ ProductDetails = /details 
+
+ /products/details/:id
+products
+productDetails
+
+
+Route guard: protect our routes using route guard.
+i)canActivate
+ii)canDeactivate
+
+Service class
+
+command: ng generate guard authentication
+         ng g g auth 
+
+
+userDashboard
+
+pipes
+
+
+
 
 
 
