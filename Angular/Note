@@ -310,7 +310,8 @@ command: ng generate guard authentication
 
 userDashboard
 
-pipes
+angular pipes
+angular forms
 
 
 

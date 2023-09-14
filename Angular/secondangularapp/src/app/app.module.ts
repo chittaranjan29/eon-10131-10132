@@ -16,6 +16,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { StudentComponent } from './student/student.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ProductDetailComponent } from './products/product-detail/product-detail
     StudentComponent,
     ProductsComponent,
     ProductDetailComponent,
+    LoginComponent,
 
   ],
   imports: [

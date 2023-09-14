@@ -10,6 +10,7 @@ import { StudentComponent } from './student/student.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { authGuard } from './services/auth.guard';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {'path':'', component: MainContentComponent},
@@ -18,8 +19,12 @@ const routes: Routes = [
   {'path':'service', component: ServiceComponent,canActivate:[authGuard]},
   {'path':'employee/:id/:deptid', component: EmployeeComponent},
   {'path':'student', component:StudentComponent},
-  {'path':'products', component:ProductsComponent,canActivate:[authGuard]
-    
+  {'path':'login', component:LoginComponent},
+  {'path':'product-detail', component:ProductDetailComponent},
+  {'path':'products', component:ProductsComponent,
+    children:[
+      {'path':'product-detail',redirectTo:'/product-detail'}
+    ]
 
   },
   {'path':'**', component: ErrorComponent}
