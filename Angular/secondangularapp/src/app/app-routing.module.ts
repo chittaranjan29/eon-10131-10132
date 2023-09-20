@@ -11,19 +11,27 @@ import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { authGuard } from './services/auth.guard';
 import { LoginComponent } from './login/login.component';
+import { PipesExampleComponent } from './pipes-example/pipes-example.component';
+import { TemplateComponent } from './template/template.component';
+import { ReactiveComponent } from './reactive/reactive.component';
 
 const routes: Routes = [
   {'path':'', component: MainContentComponent},
   {'path':'about', component: AboutUsComponent},
   {'path':'contact', component: ContactComponent},
-  {'path':'service', component: ServiceComponent,canActivate:[authGuard]},
+  {'path':'service', component: ServiceComponent},
   {'path':'employee/:id/:deptid', component: EmployeeComponent},
   {'path':'student', component:StudentComponent},
   {'path':'login', component:LoginComponent},
   {'path':'product-detail', component:ProductDetailComponent},
+  {'path':'pipes', component:PipesExampleComponent},
+  {'path':'signup', component:TemplateComponent},
+  {'path':'register', component:ReactiveComponent},
   {'path':'products', component:ProductsComponent,
     children:[
-      {'path':'product-detail',redirectTo:'/product-detail'}
+      {'path':'product-detail',redirectTo:'/product-detail'},
+      {'path':'service', redirectTo:'/service'},
+      {'path':'about', redirectTo:'/about'},
     ]
 
   },

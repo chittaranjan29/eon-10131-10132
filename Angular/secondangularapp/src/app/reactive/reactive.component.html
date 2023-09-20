@@ -1,0 +1,26 @@
+<form [formGroup]="sampleForm" (ngSubmit)="handleFormData()">
+
+    <label>Name</label>
+    <input type="text" formControlName="name">
+    <span style="color: red;" *ngIf="sampleForm.get('name')?.invalid && sampleForm.get('name')?.touched">
+        Name is Invalid
+    </span>
+
+    <br>
+    <label>Email</label>
+    <input type="text" formControlName="email">
+    <span style="color: red;" *ngIf="sampleForm.get('email')?.invalid && sampleForm.get('email')?.touched">
+        Email is Invalid
+    </span>
+
+    <br>
+    <label>Age</label>
+    <input type="number" formControlName="age">
+    <span style="color: red;" *ngIf="sampleForm.get('age')?.invalid && sampleForm.get('age')?.touched">
+        Age is Invalid
+    </span>
+
+    <br>
+    <input type="submit" value="register" [disabled]="sampleForm.invalid">
+
+</form>

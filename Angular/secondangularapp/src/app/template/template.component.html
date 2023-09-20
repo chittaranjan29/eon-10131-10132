@@ -1,0 +1,46 @@
+<h2>Registration Page</h2>
+<form #registration="ngForm" (ngSubmit)="handleFormData(registration)">
+
+    Name:<input type="text" name="userName" ngModel   required>
+
+    <span style="color: red;"  *ngIf="registration.controls['userName']?.invalid && registration.controls['userName'].dirty">
+        Name is invalid
+    </span>
+    <br>
+    Email:<input type="text" name="email" ngModel required>
+
+    <span style="color: red;"  *ngIf="registration.controls['email']?.invalid && registration.controls['email'].dirty">
+        Email is invalid
+    </span>
+    <br>
+    Age:<input type="number" name="age" ngModel required><br>
+    <span style="color: red;"  *ngIf="registration.controls['age']?.invalid && registration.controls['age'].dirty">
+      Age is invalid
+    </span>
+    <br>
+    <button type="submit" [disabled]="registration.invalid">Sign Up</button>
+</form>
+
+
+<br/>
+
+<h2>Template Driven Form</h2>
+
+<form #form="ngForm" (ngSubmit)="save(form)" novalidate>
+
+    Name:<input type="text" name="username" ngModel #username="ngModel" username required>
+    <div *ngIf="username.invalid && (username?.dirty || username?.touched) && username.errors">
+        <span style="color: red;"  *ngIf="username.errors['required']"> UserName  is required</span>
+    </div>
+    <br>
+
+    Email:<input type="text" name="email" ngModel #email="ngModel" email required>
+    <div *ngIf="email.invalid && (email?.dirty || email?.touched) && email.errors">
+        <span style="color: red;"  *ngIf="email.errors['required']"> Email is required</span>
+        <span style="color: red;"  *ngIf="email.errors['email']"> Email is Invalid</span>
+    </div>
+    <br>
+
+    <button type="submit" [disabled]="form.invalid">Sign Up</button>
+
+</form>

@@ -310,8 +310,129 @@ command: ng generate guard authentication
 
 userDashboard
 
-angular pipes
-angular forms
+Angular pipes:The Angular pipes are used to tranform the Data. 
+
+Angular pipes takes data as input and formats  or transform the data to display in the template. We use them to change the appearance of the data before presenting it to the user.
+
+ex: date pipe, currency pipe, number pipe , percent pipe, decimal pipe etc.
+
+backend - raw data - tranform, convert and format - using pipes 
+
+syntax: Expression | pipe opertor[:pipeArguments] 
+
+Expression: is the expression that you want to transform
+| : pipe character
+pipe opertor: name of the pipe
+pipeArguments: agruments to the pipe
+
+
+Chaning Pipes: Pipes can be chained together  to make use of multiple pipes in one expression.
+
+
+ex: {{dateObj  | date | uppercase}} 
+
+
+{{number_expresion | number[:digitInfo]}}
+
+9542.12554
+[minIntegerdigits].[minFractionDigits]-[maxFractionDigits]
+{{num | number:'3.1-2'}} -> 9,542.13
+{{num | number:'7.1-5'}} -> 0,009,542.12554
+
+
+Angular forms:
+Angular forms are used to collect the data from the user.
+
+some things froms are expected to do:
+
+ i)Initialize the forms and present it to the user.
+ ii)Capture the data from the user.
+ iii)Track changes made to the fields.
+ iv)Validate the input.
+ vi)Display helpful errors to the user.
+
+ Angualar forms:
+
+ i)Template driven form- formsModule
+ It is the easiest way to build Angular forms.The logic of the form is written in the templete itself. It suitable for simple and small forms. 
+
+ ii)Model driven form / reactive form- reactiveModule
+  It is suitable for long and complex forms where lots of input fields are available and complex validation needs to be implemented. 
+
+  Building Blocks of Angular Forms:
+  The Angular forms consists of three main building blocks.
+
+  FormControl: A FormControl reprensents a single input field in an Angular form.
+
+  ex:  First name:<input type="text" name="firstName" >
+      middle name:<input type="text" name="middleName" >
+      let firstName=new FormControl();
+      let middleName=new FormControl();   
+
+
+  FormGroup: FormGroup is a collection of FormControls.
+  
+  ex:  city:<input type="text" name="city" >
+       Street:<input type="text" name="street" >
+       pincode:<input type="text" name="pincode" >
+
+ let address=new FormGroup(
+    city=new FormControl(""),
+    street=new FormControl(""),
+    pincode=new FormControl("")
+ );
+
+  FormArray: FormArray is an array of formControls.  
+ In Formarray each formControl is an element and in formGroup each formControl is a property. 
+ 
+
+ skillsForm:FormGroup;
+ this.skillForm=this.test.group(
+  name:'',
+  skills: this.test.array([])
+  }
+ );
+
+
+ get skills():FormArray{
+return this.skillsForm.get("skills") as Formarray
+ }
+
+ Reactive Form
+ API & Rest web Serveices
+ Test Rest services(Postman tool)
+ Consume Rest web services(POST, GET, PATCH, PUT, DELETE)
+
+Form states:
+ANgular form control states describe the state of a form control.
+
+
+Pristine : The user has not modified the form control
+Dirty : The user has modified the form control.
+Touched: The user has interacted with the form control, ex: by clicking or fucusing etc.
+Untouched: The user has not interacted with the form control.
+Valid: The form control's value meets the validation rules defined.
+Invalid: The form control's value does not meet the validation rules defined.
+
+
+?. - Save Navigation Operator 
+
+It can be used with form properties to prevent Angular from throwing errors when trying to access object properties of an object does not exist.
+
+
+ API & Rest web Services:
+
+ API: Application Programming Interface.
+ Two different software systems/apps can communicate to each other over the internet using a common data exchange format.
+
+ JSON/XML 
+
+ i)SOAP (Traditional web service) - Simple Object Access Protocol - XML
+ ii)REST API
+
+ Representational State Transfer(REST)
+
+
 
 
 

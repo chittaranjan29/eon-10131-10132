@@ -17,6 +17,11 @@ import { StudentComponent } from './student/student.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { LoginComponent } from './login/login.component';
+import { PipesExampleComponent } from './pipes-example/pipes-example.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TemplateComponent } from './template/template.component';
+import { DemoPipe } from './demo.pipe';
+import { ReactiveComponent } from './reactive/reactive.component';
 
 @NgModule({
   declarations: [
@@ -35,11 +40,17 @@ import { LoginComponent } from './login/login.component';
     ProductsComponent,
     ProductDetailComponent,
     LoginComponent,
+    PipesExampleComponent,
+    TemplateComponent,
+    DemoPipe,
+    ReactiveComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
