@@ -22,6 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateComponent } from './template/template.component';
 import { DemoPipe } from './demo.pipe';
 import { ReactiveComponent } from './reactive/reactive.component';
+import { UserlistComponent } from './userlist/userlist.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,13 +46,15 @@ import { ReactiveComponent } from './reactive/reactive.component';
     TemplateComponent,
     DemoPipe,
     ReactiveComponent,
+    UserlistComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

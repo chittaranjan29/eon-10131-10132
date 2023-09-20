@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { PipesExampleComponent } from './pipes-example/pipes-example.component';
 import { TemplateComponent } from './template/template.component';
 import { ReactiveComponent } from './reactive/reactive.component';
+import { UserlistComponent } from './userlist/userlist.component';
 
 const routes: Routes = [
   {'path':'', component: MainContentComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {'path':'pipes', component:PipesExampleComponent},
   {'path':'signup', component:TemplateComponent},
   {'path':'register', component:ReactiveComponent},
+  {'path':'userlist', component:UserlistComponent},
   {'path':'products', component:ProductsComponent,
     children:[
       {'path':'product-detail',redirectTo:'/product-detail'},

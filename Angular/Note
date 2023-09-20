@@ -432,6 +432,41 @@ It can be used with form properties to prevent Angular from throwing errors when
 
  Representational State Transfer(REST)
 
+ HTTP response codes;
+ 1XX - INFORMATION
+ 2xx - SUCCESS
+ 3xx - REDIRECTION
+ 4xx - CLENT ERROR
+ 5xx - SERVER SIDE ERROR
+
+ HTTP request format 
+ HTTP response format
+
+ REACT - frontend js library used for frontend development. - Facebook
+ PHP - Serverside language - used for the backend development. 
+
+ HttpClient - Module - import in app.module.ts
+ Service class - ng g s user - Provider - Observable
+
+ need to subscribe to the observable
+
+ Component - Consumer(Observer)
+
+ Observable: Provider
+ Observables helps to manage async data. We can think of observable as an array of items, which arrives asynchronously over time.
+
+ Observables maintains a list of dependents. We call these dependents as Observers. 
+ When an Observer subscribe to an observable, it needs to pass three callback methods.
+ These are next(), error(), and complete()  .
+ The observable invokes the next() callback, when it receives a value. 
+ When the observable completes it ivokes the complete() callback.
+ And when the errors occurs it invokes the error() callback.   
+
+ Observer: Consumer
+
+
+
+
 
 
 
