@@ -464,6 +464,20 @@ It can be used with form properties to prevent Angular from throwing errors when
 
  Observer: Consumer
 
+ POST - create a new resource
+ PATCH - partialy update
+ PUT - completely update a resource 
+ DELETE - delete a resource
+
+user
+
+ adduser
+
+ ng g s user
+
+
+
+
 
 
 

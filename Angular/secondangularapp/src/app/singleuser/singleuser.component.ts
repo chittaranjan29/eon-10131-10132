@@ -2,27 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 
 @Component({
-  selector: 'app-userlist',
-  templateUrl: './userlist.component.html',
-  styleUrls: ['./userlist.component.css']
+  selector: 'app-singleuser',
+  templateUrl: './singleuser.component.html',
+  styleUrls: ['./singleuser.component.css']
 })
-export class UserlistComponent implements OnInit {
+export class SingleuserComponent implements OnInit {
 
-  
-   users: User[] = [];
-  
+
+  user:any;
   constructor(private service:UserService)
   {
 
   }
-  ngOnInit(): void {   
-
-    this.service.getUserList().subscribe(
-      (response) => {          //next() callback 
-        console.log(response)
-        this.users=response.data;
-
+  ngOnInit(): void {
+    this.service.getUser().subscribe(
+      (response)=>{
+        this.user=response.data;
+        console.log(response);
       },
+  
 
       (error)=>{               //error() callback
         console.log("Request failed with error");
@@ -35,17 +33,8 @@ export class UserlistComponent implements OnInit {
       }
 
     );
-
-
   }
 
-}
 
-export class User
-{
- id:any;
- first_name:any;
- last_name:any;
- email:any;
- avatar:any;
+
 }

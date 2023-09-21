@@ -24,6 +24,9 @@ import { DemoPipe } from './demo.pipe';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import {HttpClientModule} from '@angular/common/http';
+import { SingleuserComponent } from './singleuser/singleuser.component';
+import { AdduserComponent } from './adduser/adduser.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,9 @@ import {HttpClientModule} from '@angular/common/http';
     DemoPipe,
     ReactiveComponent,
     UserlistComponent,
+    SingleuserComponent,
+    AdduserComponent,
+    UpdateuserComponent,
 
   ],
   imports: [
