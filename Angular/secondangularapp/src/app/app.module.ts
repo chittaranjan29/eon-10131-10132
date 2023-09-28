@@ -27,6 +27,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { SingleuserComponent } from './singleuser/singleuser.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { DeleteuserComponent } from './deleteuser/deleteuser.component';
+import { SquarePipe } from './square.pipe';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { UpdateuserComponent } from './updateuser/updateuser.component';
     SingleuserComponent,
     AdduserComponent,
     UpdateuserComponent,
+    DeleteuserComponent,
+    SquarePipe,
 
   ],
   imports: [

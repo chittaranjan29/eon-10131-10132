@@ -18,6 +18,7 @@ import { UserlistComponent } from './userlist/userlist.component';
 import { SingleuserComponent } from './singleuser/singleuser.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { DeleteuserComponent } from './deleteuser/deleteuser.component';
 
 const routes: Routes = [
   {'path':'', component: MainContentComponent},
@@ -35,6 +36,7 @@ const routes: Routes = [
   {'path':'user', component:SingleuserComponent},
   {'path':'adduser', component:AdduserComponent},
   {'path':'updateuser', component:UpdateuserComponent},
+  {'path':'deleteuser', component:DeleteuserComponent},
   {'path':'products', component:ProductsComponent,
     children:[
       {'path':'product-detail',redirectTo:'/product-detail'},

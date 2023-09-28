@@ -463,7 +463,7 @@ It can be used with form properties to prevent Angular from throwing errors when
  And when the errors occurs it invokes the error() callback.   
 
  Observer: Consumer
-
+ GET - fetch a single or group of resources 
  POST - create a new resource
  PATCH - partialy update
  PUT - completely update a resource 
@@ -474,6 +474,75 @@ user
  adduser
 
  ng g s user
+
+models - ng g class User
+components
+services
+
+LocalStorage & SessionStorage: WebAPI
+Both LocalSorage and SessionStorage are used at the client side to store some innformation in a key-value pair.
+
+SessionStorage is lost when the browser is closed.
+LocalStorage remains still the browser cache is cleared.
+
+SessionStorage.setItem('name','Demo');
+LocalStorage.setItem('name','Demo');
+
+
+SessionStorage.getItem('name');
+LocalStorage.getItem('name');
+
+
+SessionStorage.clear();
+LocalStorage.clear();
+
+
+
+sessionStorage.remove('name');
+
+
+user -> Dashboard(validation token) - status - true
+
+
+A,B,C  - login
+
+Component Life cycle hooks:
+Using life cycle hooks we can fine tune the behaviour of the components during its creation,
+updation and destruction.Angular invokes these methods as it creates, changes and destroys them.
+
+ i)ngOnInit - OnInit interface
+ ii)ngOnChanges - 
+ iii)ngOnDestroy - 
+
+ iv)ngAfterContentInit
+ v)ngDoCheck
+ vi)ngAfterViewInit
+ vii)ngAfterViewChecked
+ viii)ngAfterContentChecked
+
+ Custom Pipe:
+ currency, decimal, date 
+
+
+ ng g p square
+
+
+ number value -> square
+
+ 5 -> 25
+ 4 -> 16
+
+ Module : Every Angular modules comes with a default module name AppModule.
+
+command to create a module:
+ ng g m test    - test (test.module.ts)
+
+ AngularApp for consuming RestFul Web Service 
+ SLA - too many requests
+ 
+
+
+
 
 
 

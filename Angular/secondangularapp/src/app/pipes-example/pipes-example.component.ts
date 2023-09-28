@@ -12,4 +12,5 @@ export class PipesExampleComponent {
   num:number=9542.12554;
   per:number=.7414;
   cur:number=123; 
+  value:number=5;
 }

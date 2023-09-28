@@ -11,7 +11,7 @@ export class UserService {
   userURL="https://reqres.in/api/users/2";
   addUserURL="https://reqres.in/api/users";
   updateUserURL="https://reqres.in/api/users/2";
-
+  deleteUserURL="https://reqres.in/api/users/";
   constructor(private http:HttpClient) { }
 
 
@@ -40,6 +40,16 @@ export class UserService {
     const body=JSON.stringify(userObj);
     //return this.http.put(this.updateUserURL,body,{'headers':headers});
     return this.http.patch(this.updateUserURL,body,{'headers':headers});
+  }
+
+  deleteUser(id:any):Observable<any>
+  {
+    sessionStorage.removeItem('id');
+    localStorage.removeItem('id');
+
+    sessionStorage.clear();
+    localStorage.clear();
+    return this.http.delete(this.deleteUserURL+id);
   }
 
 
