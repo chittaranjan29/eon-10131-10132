@@ -1,0 +1,187 @@
+JRE - Java Runtime Environment
+JVM - Java Virtual Machine
+JDK - Java Development
+JIT - Java In Time Compiler
+
+Variable: It is a memory location where the data gets stored.
+Variable Initialization:
+
+ i)Compile time/Static:
+ ii)Runtime/Dynamic:  
+ 
+ 
+ Data Types:
+ i)Primitive - int, float, double, long, byte, short, char 
+ ii)Non-primitive/Derived: array, class etc 
+ c/5=(f-32)/9
+ 
+
+ 
+  c=5(f-32)/9
+  
+  Operator:
+  Operators are responsible for performing operations.
+  
+  Operands: Operator performs upon operands.
+  
+  Type of Operation:
+  
+   i)Arithmetic operator(+,*,/,%,-)
+   ii)Relational operator(>,>=,<,<=,==) - boolean
+   iii)Logical operator(&&, ||, !)
+   iv)Bitwise Operator(&,|, xor etc)
+   v)Assignment Operator(=, +=,-=,*=,/=)
+   vi)Shift Operator(>>,<<)
+   
+  Number of operands:
+   i)Unary(a++,++a,b--,--b)
+   ii)Binary(a+b)
+   iii)Ternary/conditional 
+   
+   
+   int result=(10>5)?10:5; 
+   
+   
+ Control flow statements:
+ 
+  i)Decision Making Statements
+   if, if-else, if-elseif-else, nested if-else, switch, break, continue 
+  ii)Looping Statements  
+   for, while, do-while, foreach
+   
+   
+   if(expression)
+   {
+     body;
+   }
+   
+   
+    if(expression)
+   {
+     body;
+   }
+   else
+   {
+    body;
+   }
+   
+   
+   if(10<5)
+   {
+    body;
+   }
+   else if(10<20)
+   {
+    body;
+   }
+   else if(20<30)
+   {
+    body;
+   }
+   ...
+   ...
+   else
+   {
+    body;
+   }
+   
+   
+    if(expression)
+   {
+     if(expression)
+     {
+       body
+     }
+   }
+   else
+   {
+    body;
+   }
+   
+   switch(control_variable)
+   {
+     case 1:body; break;
+     case 2:body; break;
+     case 3:body; break;
+     .
+     .
+     .
+     default:body;break;
+   
+   }
+   
+   
+   Fall through the execution
+   
+   
+   Enhanced Switch Block - Java 13
+   RestAPI based Angular
+   
+   
+   Loop: It is used to execute a block of statements repeatedly until the condition of the loop satisfy.
+   
+   
+   Entry controlled: for, while, foreach
+   Exit controlled: do-while
+   
+   for(initialization;expression;valueupdation)
+   {
+   		body;
+   }
+   
+   while(expression)
+   {
+    body;
+   }
+   
+   
+   do
+   {
+   
+    body;
+   
+   }
+   while(expression);
+   
+ Jump statements:
+ i)Break:
+ Break statement is a loop control statement that is used to terminate the loop .
+ As soon as the break statement is encountered the loop stops. 
+ 
+ ii)Continue: When the continue statement is encountered in the loop body the control directly goes to the 
+ beginning of the loop for the next iteration instead of executing the statements of the current iteration.   
+ 
+ In Java three types of streams available
+ i)Input Stream(System.in)
+ ii)Output Stream(System.out)
+ iii)Error Stream(System.err) - used for error reporting
+ 
+ a)Scanner class
+ b)BufferedReader class: Reads character stream.
+ 
+ Data form console - Byte Stream
+ 
+ 
+ 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+  
