@@ -156,16 +156,249 @@ Variable Initialization:
  ii)Output Stream(System.out)
  iii)Error Stream(System.err) - used for error reporting
  
- a)Scanner class
- b)BufferedReader class: Reads character stream.
+ a)Scanner class - java.util - utility - helper class - 1KB
+ b)BufferedReader class: Reads character stream. - java.io - 8KB
  
  Data form console - Byte Stream
  
+ OOP:
+ 
+ object: It is real world entity that has states and behavior.
+ 
+ Car 
+ States - number, brand name, color, model, engine type etc
+ Behavior/activities - apply break, accelarate, slow down etc.
+ 
+ banking app -   Account Holder, Account, Department, Employee, Transactions etc.
+ 
+ Relation between entities : Mapping
+ 
+ class: A class template or blue print that represents the states and behavior of
+ the objects.
+ 
+  object states are represented as instance variable in the class
+  object behaviors are represented as methods of the class.
+  
+  
+ constructor:A constructor is like a method having no return type and same name as class.
+ 
+ Types:
+  i)Default - A constructor with empty arguments is called default constructor.
+  ii)Parameterized - A constructor with arguments/parameters is called parameterized constructor.
+  iii)Copy - A constructor with argument of current object is called copy constructor.
  
  
+ purpose: 
+ i)Creating an object.
+ ii)Initialization of the instance variables.
+ 
+ types of constructors:
+ method:
+ this keyword: It represents current class instance. With the help of the keyword we can access
+ methods, constructors and instance variables of the class.
+ 
+ i)It resolves name conflict between local and instance variable.
+ 
+ 
+ POP: Procedure Oriented Programming
+ i)Lack of data security
+ 
+ 
+ Encapsulation: Wrapping up of functions/methods and data as a single unit in known as Encapsulation.
+ 
+ Getters - public method helps us to get the value
+ Setters - public method helps us to set the value
+ 
+ 
+ instance variables are object states. -> data
+ methods are behaviour of the object.  -> method that work upon the data
+ 
+ static: Better memory utilization(saving memory);
+ i)variable
+ ii)Method
+ iii)Block
+ iv)class 
+ 
+ Inside a static context(method,block) only static data members can be accessed.
+ 
+Nested classes:
+ class A //Outer class/Container class
+ {
+   class B //inner class/contained class
+   {
+   
+   }
+ 
+ }
+ 
+ int a=10;
+ static int b=20; 
+ static void test()
+ {
+   sysout(a);
+   sysout(b);
+ 
+ } 
+ 
+  void test1()
+ {
+   sysout(a);
+   sysout(b);
+ 
+ }  
+ 
+ 
+ i)Polymorphism :
+  Greek word. poly(many) + morphs(forms)
+  Polymorphism means performing a task in different ways.
+  
+   a)Compile time polymorphism/static binding/early binding:
+     Overloading: In a class if multiple same name methods are present with different numbers of
+     parameters or different types of parameters than it is called as function/method overloading.
+     
+     Overloading increases the readability of the program.
+     
+     
+   b)Runtime polymorphism/dynamic/late binding/dynamic method dispatcher
+     Whenever an object is bound with the functionality at runtime , this is known as Runtime Polymorphism.
+     The runtime polymorphism can be achieved by method overriding. 
+     When we have a same signature method in both parent and child class, JVM decides which method needs to
+     be called at runtime.   
+     Overriding
+     
+     Rules:
+     
+      class A
+     {
+       public void test()
+       {
+       }
+     }
+     
+     class B extends A
+     {
+       public void test()
+       {
+       }
+     
+     }
+     
+     
+     ob.test() //decided at runtime
+   
+ Inheritance:
+ Biological term means children inherits parents.
+ 
+ Through inheritance Java promotes reusability feature.
+ Children always inherits parents.
+ 
+ 
+  Types: i)Single ii)Multiple iii)Multilevel iv)Hybrid v)Hierarchical
+ 
+   At class level - Single, Multilevel, Hierarchical
+   At interface level - Multiple, Hybrid
    
    
+  A -> B (Extending)
+  
+  Employee(id, name, designation, phone, dob, email,) -> Manager(role), Developers(role), Designers, Tester
+ 
+    
+ 
+ ii)Types of polymorphism
+ iii)Overloading
+ Inheritance
+ iv)Overriding 
    
+ Abstraction :It is a process of hiding implementation details of something and only providing the functionality
+ to the user. Outside world can use the service without knowing how things are working internally.
+ 
+ 
+ Ways to achieve abstraction:
+ a)Abstract class:(0-100%)
+ A class declared with abstract keyword is called as Abstract class.
+ It can have both abstract and non-abstract method.
+ 
+ 
+ i)Abstract class can not be instantiated.
+ ii)Abstract class can have abstract and non-abstract method.
+ iii)Abstract class can have constructors. 
+ iv)It can have static and not static data members.
+ v)It can have static methods.
+ 
+ 
+ b)Interface:(100%)
+ Interface is just like a class used as a blueprint.
+ It can have abstract, static, default and private methods.
+ 
+ An Interface can be implemented by a class or can be extended by another interface.
+ 
+ Java 8: static and default methods
+ Java 9: private method
+ 
+ Multiple & Hybrid inheritance using Interface:
+ 
+ Interface A
+ Interface B
+ 
+ implemented by a class  
+ 
+ Overloading:
+ client - ShoppingCart 
+  product name (price from db,quantity as 1)
+  product Name, price(quantity is 1)
+  product Name, quantity, price
+  
+  
+  A - a,b
+  
+  B -
+  C -
+  Interface A
+  {
+    int a=10;
+    constructor()
+    {
+    }
+    
+    default()
+    {}
+    
+    
+    
+    abstract();
+    
+    private();
+    
+    
+  }
+  
+  i)WAP to print the count of alphabets, vowels, consonants, spaces, words, digits and special
+  characters.
+  
+  Sample Input: Born in 2004!!
+  Sample Output: alphabets : 6
+  				 vowels: 2
+  				 consonants: 4
+  				 words: 3
+  				 spaces: 2
+  				 special : 2
+  
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
    
    
    

@@ -1,0 +1,53 @@
+Exception Handling: 
+i)Errors
+ii)Exception
+iii)Types of exceptions
+  a)Checked or compile time exception: Exception is checked and reported at compile time by the compiler.
+  b)Unchecked or runtime exception: Exception not checked or reported at compile time. 
+ 
+iv)Handle exception
+v)Try-catch-finally block
+vi)Custom exception
+vii)throw and throws keyword
+viii)Exception propagation
+
+Errors: Errors refers to different types of problems(bugs) in the program.
+Types:
+ i)Syntactical/syntax errors: Due to mistakes in the program
+ ii)Logical errors: wrong output generated
+ iii)Runtime errors: Errors that occurs in the execution phase.
+   a)Can be handled(Exception)
+   b)Can't be handled(Errors)
+   
+   IOException
+   SQLException 
+   
+   VirtualMemoryOverflow - Errors
+ 
+ Exception: These are unwanted events that occurs during the runtime phase of the program and
+ due to which the application/program terminated abnormally.  
+ 
+ By handling exception in the program/application we can preserve the normal flow of the application.
+ 
+ Java with resource closing:
+ 
+ Throw : It helps the developer/programmer to throw an exception from any block explicitly.
+ 
+ if(a>b)
+ {
+  throw new ArithmeticException();
+ }
+ 
+ 
+ Throws : It is used to report all the checked exception that might occur in  a particular
+ method.
+ 
+ 
+ void test()thorws IOException, NumberFormatException 
+ { 
+ 
+ 
+ 
+ }
+ 
+   

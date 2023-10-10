@@ -1,0 +1,34 @@
+  String:
+  Strings are objects that can store the character of value.
+  
+  
+  Ways to declare String:
+  i)String literal
+  
+    String st="Hello Java";
+    String st1="Hello Java";
+  
+  ii)New Keyword
+  
+    String st=new String("Hello World");
+  
+  i)Why Strings are immutable(not updatable) in Java?
+  ii)Is it possible to create mutable string in Java?
+   StringBuffer
+   StringBuilder
+  
+  Heap memory   - allocating objects
+  Constant Pool - Stores string constant(reusable)
+  
+  Classes and interfaces:
+  i)charSequence
+    implemented by
+    a)String(immutable object)
+    b)StringBuffer(mutable object)
+    c)StringBuilder(mutable object)
+    
+   ['H','e','l','l','o',' ','W','o,'r','l','d'] 
+ Methods:
+ i)length()
+ ii)charAt()
+ iii)   
