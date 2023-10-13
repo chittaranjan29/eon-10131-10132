@@ -3,6 +3,7 @@ package com.test;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.SQLException;
 
 import javax.naming.directory.InvalidAttributesException;
 
@@ -23,10 +24,10 @@ public class ThrowKeywordExample {
 			}
 			else
 			{
-				throw new InvalidAttributesException("Age is below 18!!");
+				throw new InvalidAgeException("Age is below 18!!");
 			}
 		}
-		catch (InvalidAttributesException e) {
+		catch (InvalidAgeException e) {
 			
 			System.out.println(e.getMessage());
 		}

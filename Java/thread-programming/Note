@@ -1,0 +1,114 @@
+Thread Programming:
+Terminologies:
+Program:A program is nothing but an ordered set of instructions executed to generate the desired output.
+Running program - the program is in execution
+
+
+OS - Operation System
+Processor - CPU
+Ram - memory
+Disk space - to store files of the program
+Network - to run the program over the internet.
+
+Process:Process is an instance of a running program which is responsible for managing different states 
+of the program. 
+
+
+clicking close button of Eclipse -> Instruction goes to OS -> OS convey the information to the processor 
+which handles eclipse process  -> kill the process 
+
+multitasking: Doing more than one task at the same time.
+
+ Multiprocessing: Running multiple processes concurrently under the OS is called Multiprocessing.
+ Multithreading: Running multiple threads concurrently under a process is called Multithreading.
+
+
+Google browser - joined online meeting, downloading some movies, browsing the internet, semester result 
+
+
+Process -> subprocess1(thred), subprocess2, subprocess3 
+
+Thread : Thread is a subprocess or small unit on task of the main process.
+
+Thread programming: 
+Multiplayer games
+Web application
+Simulation software
+Animation based application
+Stock market related app.
+
+
+How to create a thread:
+i)By extending parent Thread class
+ii)By implementing Runnable interface
+
+Runnable - run()
+Thread class implemented Runnable interface
+
+
+
+Differences between a Thread and a process
+i)Life cycle of a thread:
+ a)New State: Thread instance is just created but not started.
+ b)Runnable State: Ready to run waiting for the CPU.
+ c)Running State: Thread has got the CPU and is in running state.
+ d)Blocked State: The is trying to acquire a lock on the resource which is acquired by other thread.
+ e)Waiting State: The thread will be in the waiting state when it calls a wait() or join() method.
+ f)Timed Waiting State: A thread lies in the timed waiting state when it calls a method with a timed-out parameter.	
+ d)Terminated State: A thread terminates because of either of the two reasons.
+    It exits normally when the task is over
+    Some error occurred due to which OS terminates the thread.
+ 
+ii)Thread priority:
+ Each thread has a priority value represented by a number between 1-10.
+ 
+ 1 - Lowest Priority
+ 5 - Normal or Default priority
+ 10 -Maximum priority
+ 
+ 
+ t1 - 1, t2 - 10, t3 - 5
+ 
+ t2 - first   - 5millis - 1 - 10
+ t3 - second  - 2millis - 1 - 10000
+ t1 - third   - 1millis - 1 to 100000
+ 
+ getPriority();
+ setPriority(1);
+
+
+Joining a thread
+
+
+join(): It will put the current thread on wait until the thread on which it is called is dead.
+If the thread is interrupted then InterruptedException will be raised.
+
+
+join(long millis):It will put the current thread on wait until the thread on which it is called 
+is dead or wait for specified time. 
+
+iii)Daemon Thread: It is the lowest priority thread. The main purpose of this thread is to provide
+services like garbage collection, resource closing etc to the other user threads.
+The life span of the deamon thread depends on the user threads. JVM will terminate all the daemon threads 
+after the completion of user threads. 
+
+SetDaemon(Boolean);
+isDaemon() - Boolean
+
+
+  
+iv)Thread Group 
+v)Thread pool:
+
+
+
+
+
+
+
+
+
+
+
+
+

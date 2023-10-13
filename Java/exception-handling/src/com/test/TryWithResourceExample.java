@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 public class TryWithResourceExample {
 
 	public static void main(String[] args) {
-		
+		//try with resource - Java 7
 		try(FileOutputStream fileOutputStream=new FileOutputStream("F:\\java\\exception-handling\\sample.txt");)
 		{
 			String content="Java exception handling!!";
@@ -18,6 +18,7 @@ public class TryWithResourceExample {
 		}
 		
 		System.out.println("Resources are closed.");
+		
 	}
 
 }

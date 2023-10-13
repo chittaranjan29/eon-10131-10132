@@ -43,11 +43,22 @@ Types:
  method.
  
  
- void test()thorws IOException, NumberFormatException 
- { 
- 
- 
- 
- }
- 
+i)Custom Exception
+
+An ecommerce.
+
+InvalidArgumentException 
+
+InvalidOrderIdException - order id invalid
+WrongOrderIdException 
+
+
+
+ii)Exception Propagation:An exception is thrown from the top of the stack and if it is not caught or handled,
+it drops down through the call stack from top  until it reaches to the bottom of the stack.
+This is called exception propagation. 
+
+
+
+Thread Programming 
    

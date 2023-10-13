@@ -1,0 +1,14 @@
+1. Register with the Driver
+2. Create a Connection instance
+3. Create a statement
+4. Run the query
+5. Close the database connection 
+
+Maven 
+
+Test cases:
+
+time & space 
+
+Visible
+Hidden
