@@ -1,0 +1,100 @@
+Package: It is a mechanism to encapsulate a group of related classes, sub packages and interfaces. 
+
+ i)Prevention of naming conflicts.
+ ii)Locating related classes and interfaces is easy. 
+ iii)Provides a controlled access.
+ iv)Packages can be considered as data encapsulation.
+ 
+ 
+ Package Naming:
+ Packages are named in reverse domain order.
+ 
+ ex: org.amazon.test, com.abc etc
+ 
+ Types of packages:
+ i)In build packages:
+ These packages are consist of large number of classes which are a part  of
+ Java API. 
+ 
+ java.util, java.io, java.sql, java.net etc.
+ 
+   
+ ii)User defined packages:
+ These are custom packages created by the user to keep the related classes and
+ interfaces under the same location. 
+ 
+ 
+ Static importing: It allows the developer to import static members of 
+ the class directly.
+ 
+ Collection Framework:(Store and manage different types of objects)
+ 
+ introduced Java 1.2.
+ 
+ Stack, Vector and Hashtable.
+ 
+ 
+ 
+ manage: insert, Update, delete, search etc.
+ Store: It varies from type to type.
+ collection:Group of objects.
+ 
+ 
+ Main interfaces: Collection, List, Queue, Set, Map, Iterable etc.
+ 
+ Collection Interface: 
+ This interface is  a member of the collection framework.
+ It is a part of java.util package.
+ It is one of the root interface of the collection hierarchy.
+ It has three main child interfaces. These are List, Set and Queue. 
+ 
+ List Interface:
+  It is the child interface of the collection interface 
+  It has four main implementation classes namely ArrayList, LinkedList, Stack and Vector.
+  It is an ordered collection of objects in which duplicate values are allowed.
+  
+ ArrayList:
+  i)It is one of the implementation class of the List interface.
+  ii)Internally it uses a dynamic array.(Growable or Shrinkable).
+  iii)It can have duplicate elements.
+  iv)Insertion order is maintained.
+  v)It is non-thread safe.(non-synchronized)
+  vi)Random object access is possible.
+  
+  
+
+  
+  int ar[20]; 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

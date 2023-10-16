@@ -12,3 +12,29 @@ time & space
 
 Visible
 Hidden
+
+
+JDBC :
+
+DriverManager: A class which is a component of JDBC API and present in java.sql package.
+It acts as an interface between users and drivers. It keeps track of the available drivers and
+handles establishing a connection between a database and appropriate driver.
+It can register or deregister from database driver. 
+
+Statement:The statement interface provides methods to execute queries with the database.
+
+Statement - not secured and safe  for update or insert query 
+
+Connection:A connection is a session between Java application and the database. It helps to 
+establish a connection with the database. It also provides some important methods link commit(), rollback(),
+setAutoCommit(), setTransactionInIsolation() etc.
+
+ResultSet:It helps us to manage a cursor position pointing to a row in the database table.
+Initially it points before the first row of the table. The cursor position can be changed to backward or forward
+direction.
+
+PreparedStatement: It is a subinterface of statement interface and used to perform parameterized query.
+ 
+ Stored Procedures/Function:
+ 
+ CallableStatement Intrface

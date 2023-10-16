@@ -99,7 +99,35 @@ isDaemon() - Boolean
   
 iv)Thread Group 
 v)Thread pool:
+  a)Thread Cycle Overhead
+  b)Resource Thrashing
 
+
+Concurrent execution of Threads:
+
+ i)Thread Interference
+ ii)Inconsistency
+ 
+ 
+ price of Gold - object - thread1(60000) 61000
+ Price :  - thread2
+
+  
+Synchronization:  
+It is a process of allowing only one thread to access a shared resource at a time while other threads 
+will be in the waiting for the current thread to release the lock on the resource once execution completes.
+
+
+Object level synchronization
+i)Method synchronization
+ii)Block Synchronization
+
+class level synchronization
+iii)Static Synchronization
+
+
+
+  
 
 
 
