@@ -1,0 +1,539 @@
+Thread Programming / Multithreading:
+
+MutiTasking:
+Doing/Performing more than one task concurrently is called Multitasking.
+
+At Process level: When multiple processes are executed concurrently in the Operating System 
+it is called as Multiprocessing.
+
+At Thread level:When multiple threads are executed simultaneously under the process it is called 
+as Multithreading.
+
+Programming level:
+
+Program1: task1 , task2, task3 etc. - through A process
+task1, task2, task3 - each task is a thread 
+
+Process: A process is an instance of a running program.
+Thread: It is a sub-process or a small part of the main process.
+
+Ways to create a thread:
+i)By extending Thread class.(Thread class implements Runnable interface)
+ii)By implementing Runnable interface.
+
+
+Life cycle of a thread:
+A thread in Java at any point of time exist in any one of the following state.
+A thread lies only in one of the state:
+
+i)New state: When a new there is just created. it is in new state. 
+
+ii)Runnable State: A thread that is ready to run is moved to a Runnable state.
+
+iii)Blocked State: The thread will be in the locked state when it is trying to acquire a lock
+but currently acquired by the other thread.
+
+iv)Waiting state: The thread will be in the waiting state when it calls wait() or join() 
+method. It will move to the runnable state when other thread will notify or that thread will be terminated.
+
+v)Timed waiting state:A thread lies in a timed waiting state when it calls a method with a
+time-out parameter. A thread lies in this state until the timeout is completed or until a 
+notification is received. 
+
+vi)Terminate state : A thread terminates because of the following reasons:
+
+ a)Natural: Because it's exits normally. This happens when the task of the thread is completed entirely.
+ b)Abnormal/Forceful: When some unusual errors or events occurred OS terminates the thread 
+ forcefully or user kills a thread forcefully.
+ 
+
+t1 -> r1(file) - read operation 
+t2 -> r1(file) - write operation
+
+
+i)What is a process?
+ii)What is a thread? What is multithreading?
+iii)What is multiprocessing?
+iv)Why thread is lightweight?
+v)Difference between a thread and a process?
+vi)What is context switching?
+vii)What are the life cycle states of a thread?
+viii)What are the different ways to create a thread?
+
+
+Q:->Write a program to implement two threads running concurrently in the code while the
+first thread will print a multiplication table of 5 and the other thread will print the 
+multiplication table of 10 up to 10 terms.  
+
+Q:->Write a program to implement two threads from one class running concurrently in the code while the
+first thread will print a multiplication table of 5 and the other thread will print the 
+multiplication table of 10 up to 10 terms. 
+
+run()
+{ 
+
+ for(int i=1;i<=10;i++)
+ {
+  sysout(n*i+"="+n*i)
+ }
+}
+
+
+Naming a thread
+setting thread priority
+getting thread priority
+getting thread id
+wait, join method
+
+Priority: It is a value between 1 to 10 associated with every thread. Depending on the value
+the thread scheduler will schedule the thread for execution.
+
+Maximum - 10
+Default - 5
+Minimum - 1
+
+Thread.MAX_PRIORITY
+Thread.MIN_PRIORITY
+Thread.NORM_PRIORITY
+
+
+Thread.curretThread()
+
+Program 1 - task1, task2, task3, task4  
+
+i)less time to execute
+ii)Better utilization of CPU throughput
+
+
+Runnable - abstract run()
+Thread - class
+
+Runnable
+
+Thread 
+class extends Thread class
+
+Thread Scheduler:
+A component of Java decides which thread to be executed by the CPU(processor).
+
+wait() 
+
+Daemon Thread: In Java, daemon threads are low priority threads thats run in the background to
+perform tasks such as garbage collection or provide services to other user thread.
+
+The life of daemon thread depends on the mercy of user threads, meaning that when all user 
+threads finish their execution, JVM will terminate daemon threads automatically.  
+
+
+isDaemon()
+setDaemon(true)
+
+Thread Group
+Thread Pool
+
+
+Multithreaded App: Web app, database app
+
+Thread overhead/Resource thrashing
+
+Thread Group: Thread Group creates a group of threads. It offers a convenient way to manage 
+groups of threads as a unit. This is particularly valuable in situations in which you want to
+suspend or resume a number of related threads.
+ 
+ a)Thread Group forms a tree in which every thread group except the initial thread Group has a parent.
+ b)A thread is allowed to access information about its own group but can not access information about its 
+ parent group.
+
+ 
+ A - a1(t1,t2,t3), b1(p1,p2,p3)
+ 
+ 
+ 
+Thread Pool:
+Thread cycle overhead/Resource thrashing
+
+
+Synchronization:
+Mutithreaded programs may often come to a situation where multiple threads try to access 
+the same resource and finally produce erroneous and unforeseen results.
+
+Problems:
+i)Thread conflict
+ii)Inconsistency problem
+
+
+i)Synchronized method - starvation
+ii)Synchronized block	
+iii)Static synchronization 
+
+join() : 
+
+MLAT Exam and Mock:
+
+Collection Framework:
+
+collection: A group of things.
+
+Group of Objects:  
+
+Framework: A collection of predefined classes, interfaces, functions combined together as a single unit.
+
+
+Any group of individual objects which are represented as a single unit is known as a 
+collection of objects.
+
+Collection framework was added in Java from JDK 1.2
+
+Legacy classes: HashTable, Vector, Arrays etc.
+
+
+Iterable -> Collection -> List, Set, Queue, Map
+
+Interface: abstract method, default method, static method
+
+List: 
+
+i)It is provided in collection framework to store and manage the ordered collection.
+ii)It is child interface of Collection and added in JDK 1.2.
+iii)It has five implementation classes. These are : ArrayList, LinkedList, Vector, Stack, ArrayDeque
+
+
+
+drawback of array:
+i)fixed size can't grow or shrink.
+
+ArrayList:
+i)Any type of objects Integer, Float, Double or any other.
+ii)It is a part of collection framework and present in java.util package.
+iii)It internally uses a dynamic array which can grow or shrink.
+
+LinkedList:
+i)It implements List interface and uses doubly linkedlist data structure internally to manage
+objects.
+ii)It maintains insertion order.
+iii)It is a non thread safe class(Non-synchronized).
+iv)Performance is better than ArrayList as shift operation is not required.
+
+
+[2, 5, 7, 8, 9, 3]
+
+Vector:
+i)It'a a legacy class but now compatible with collection framework.
+ii)It is thread safe class.(Synchronized)
+iii)Internally it uses a dynamic array.
+iv)It maintains insertion order.
+v)Performance is lower than ArrayList or LinkedList. 
+
+Stack:
+i)It implements List interface and extends Vector class.
+ii)This class is based on LIFO principle.
+iii)push, peek and pop operations can be performed on the stack.
+iv)Elements added or deleted from the top of the stack.
+
+
+Set:
+i)It is present in java.util package and extends Collection interface.
+ii)It is an unordered collection of objects in which duplicates can not be stored.
+iii)It is an interface that implements mathematical set.
+iv)It has two child interfaces SortedSet and NevigableSet.
+v)LinkedHashSet and HashSet implemented this interface directly.
+
+ HashSet:
+ i)HashSet stores an element by using a mechanism called Hashing.
+ ii)It allows unique elements only.
+ iii)It doesn't allows null value.
+ iv)It's a non thread safe class.
+ v)Insertion order is not maintained.
+ 
+ 
+ Hashing:
+ Hashing is a technique that enables us to store the data in key-value pair.
+ By modifying the original key using a hash function we can use these modified keys as the
+ index of an array and store the associated data at the index location in the hash table 
+ for each key.
+ 
+ Hash Table:
+ A Hash table is a data structure that stores some information, and the information has 
+ basically two main components, i.e., key and value. 
+ The hash table can be implemented with the help of an associative array. 
+ The efficiency of mapping depends upon the efficiency of the hash function used for mapping.
+ 
+ Hash Function:It tansforms supplied keys into another fixed-size value called Hash value.
+ 
+    key ->   Hash Function -> Hash Value
+    
+Q:->What is Hashing?
+Q:->How hash function works?
+Q:->What is hash collision? Explain Ways to resolve it.     
+Q:->What is Hash table?
+Q:->How HashSet works internally? 
+
+LinkedHashSet:
+i)Internally it uses Hashtable and doubly linkedlist and implements Set interface.
+ii)It contains only unique keys.
+iii)It is non thread-safe.
+iv)It maintains insertion order.
+v)It allows null value.
+
+  
+ 
+ TreeSet:
+ i)It extends AbstractSet and implements NevigableSet interface.
+ ii)Internally it uses a tree data structure to strore and manages all the elements.
+ iii)Only unique values are allowed.
+ iv)Null values are nor allowed.
+ v)It is non-thread safe.
+ vi)Elements are stored in ascending order.
+ 
+ Queue:
+ i)It is present in java.util package and extends the Collection interface is used to hold the elements 
+ in FIFO(First In First Out) order.
+ ii) Elements can be added at the end of the list and removed from the start of the list.
+ 
+ 
+ PriorityQueue:
+ A priorityQueue is used when the data elements are to be processed on the basis of
+ associated priority value.
+ 
+ i)It doesn't allow null value.
+ ii)It is non-thread safe.
+ 
+ 
+ Deque:
+ i)It is also known as Double ended queue or Array Deck.
+ ii)This is a special kind of queue in which elements can be added/removed from either of the
+ end.
+ iii)It is a child interface of queue.
+ 
+ 
+ ArrayDeque:
+ i)We can add/remove element from both side.
+ ii)Null value not allowed.
+ iii)Non-thread safe class.
+ iv)It is faster than Stack and LinkedList.
+ 
+ 
+Map Interface:
+i)A map contains a key value pair. Each key and value pair is known as an entry.
+ii)A map contains unique keys.
+iii)It is useful for search, update or delete operation on the basis of key.
+iv)It has three main implementation classes. These are HashMap, LinkedHashMap, HashTable 
+v)Duplicate not allowed.
+vi)
+
+
+HashMap:
+i)It is an implementation class of Map interface and uses Hashing algorithm in storing
+the elements.
+ii)Non-synchronized class.
+iii)It doesn't maintains order.
+iv)Only one null key and multiple null values allowed.
+
+
+LinkedHashMap:
+i)It uses HashTable and LinkedList data structure to implement the Map interface.
+ii)Unique elements are allowed.
+iii)It maintains insertion order.
+iv)Only one null key and multiple null values allowed.
+v)Non-synchronized class.
+
+
+TreeMap:
+
+Map -> SortedMap -> NavigableMap -> TreeMap
+TreeMap extends AbstractMap class(implements Map)
+
+i)Contains unique elements.
+ii) Null key not allowed but can contain any number of null values.
+iii)Internally it uses a red-black tree data structure.
+iv)Non-synchronized class.
+v)It maintains ascending order.
+
+
+Comparable and Comparator
+
+
+Comparable:
+i)Added in Java 1.2.
+ii)It has only one abstract method compareTo().
+iii) It is used to order the objects of the used defined class.
+iv)It proving a single sorting sequence.
+
+Comparator:
+i)It is used to perform sorting of the user defined objects.
+ii)Multiple sorting sequence is supported.
+
+
+Java 8 features:(Functional Programming)
+i)Lambda Expression:A lambda expression simply a function without a name. It can be used as 
+a parameter in a function.
+It facilitates functional programming and simplifies the development.It is also used to
+implement functional interface.
+
+(parameters) -> {body}
+
+
+() ->{ sysout("hello world") }
+(s)->{sysout(s*s)}; 
+(int a, int b)->{sysout(a*b)}
+(int a, int b)->{return (a*b)}
+
+
+parameters - a lambda expression can have zero or more parameters.
+Arrow token - The arrow token separates the parameters from the body.
+body - the body of the lambda expression which describes the functionality.
+
+Advantages:
+
+i)Conciseness: It provides a concise way of of implementing single method interface.
+ii)Functional Programming: It enables functional programming style.
+iii)Improves Readability: They often makes the code more readable.
+
+
+
+ii)Functional Interface:An interface with single abstract method is called functional interface.
+e.g: Consumer, Predicate, Function, Supplier, Bipredicate, BiFunction, Biconsumer etc.
+
+
+iii)Method Reference: (::)
+It is used to refer methods of functional interface. 
+It is a compact and easy form of lambda expression.
+Whenever we use lambda expression to just refer a method, we can replace the 
+lambda expression using method reference.
+
+Types of method reference:
+
+ a) Reference to a static method : containingclassName::static method name
+ b) Reference to an instance method of a particular object:  object:: instanceMethodName
+ c) Reference to an instance method of an arbitrary object of a particular type - containingType::methodName
+ d) Reference to a constructor: ClassName::new 
+ 
+
+iv)Stream api: 
+	a)Java provides a new feature called stream api for functional programming.
+	b)It is present in java.util.stream package.
+	c)Stream does not store elements. It simply conveys elements from a source such as
+	array, collection, io channel, through a pipeline of computational operations.
+	d)Intermediate operations includes map, filter, max, min, distinct, sorted etc.
+	e)Terminal operations includes foreach, count, collect, sum, avg etc.
+	 
+v)Collectors class:
+Collectors is a final type of class extends the Object class. It provides reduction operations, such as 
+accumulating elements into collection, summarizing  elements according to various criteria etc.
+
+vi)Optional class:
+It is a public final type of class and is used to deal with NullPointerException in Java 
+applications. It is present in java.util package.
+It provides methods to ensure the presence of value in a particular variable.
+vii)Static and default methods.
+
+Advantages:
+i)Null checks are not required.
+ii)No more NullpointerException at runtime.
+iii)No more boilerplate code.
+
+
+Exception Handling: 
+i)Errors
+ii)Exception
+iii)Types of exceptions
+iv)Handle exception
+v)Try-catch-finally block
+vi)Custom exception
+vii)throw and throws keyword
+viii)Exception propagation
+
+Errors: Errors refers to different types of problems(bugs) in the program.
+Types:
+ i)Syntactical/syntax errors: Due to mistakes in the program
+ ii)Logical errors: wrong output generated
+ iii)Runtime errors: Errors that occurs in the execution phase.
+   a)Can be handled(Exception)
+   b)Can't be handled(Errors)
+   
+   IOException
+   SQLException 
+   
+   VirtualMemoryOverflow - Errors
+ 
+ Exception: These are unwanted events that occurs during the runtime phase of the program and
+ due to which the application/program terminated abnormally.  
+ 
+ By handling exception in the program/application we can preserve the normal flow of the application.
+ 
+   
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+ 
+ 
+  
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

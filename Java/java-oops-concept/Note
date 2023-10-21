@@ -1,0 +1,285 @@
+Static:
+Static keyword is used for efficient memory management.
+i)Used with Variable(static variable)
+ii)Used with Methods(static method)
+iii)Used with class(Nested class)
+iv)Used with block(static block)
+
+When to use static variables and methods?
+
+Use the static variable for the property that is common to all objects.
+For example in a class Student, all students share the common school/college name.
+
+Use static method for changing static variables.  
+
+
+
+Static block:  A static block is used to initialize static data members.
+a static block executed in a program even before the main method.
+
+Nested class:
+A class can be made static only if is a nested class. We can not declare a top level(outer) class
+with static modifier.
+Nested static class does not need a reference of outer class.
+A static class can not access non-static members of the outer class.
+Advantage is logical grouping of code using nested class can be achieved.
+
+Outer class
+{
+ Inner class
+ {
+  
+ }
+} 
+
+this keyword
+Four pillars of OOp(Inheritance, Abstraction, Encapsulation and Polymorphism)
+
+Inheritance:(To achieve reusability) 
+Extending the classes. Creating child class from parent.
+
+The process of one class inheriting properties and methods of another class is called as Inheritance.
+
+
+i)The class that inherits is properties and methods is called as child class, sub class or derived class.   
+ii)The class from which properties and methods are inherited is called parent class, base class or super class.
+
+
+Inheritance types:
+
+i)Single ii)Multilevel iii)Hierarchical
+
+iv)Multiple v)Hybrid (Java does not support at class level )
+
+Abstraction: Abstraction is a process to hiding implementation details and exposes only the 
+functionality to the user. This means the user will know "What it does" rather than
+"how it does".
+
+There are two ways:
+i)Abstract class.(full or partial abstraction)
+ii)interface.(full abstraction)
+
+Encapsulation:(Data hiding)
+Wrapping up of the function/methods and data as a single unit is called as Encapsulation.
+In Java, encapsulation is achieved by declaring the instance variables of a class as private.
+
+
+Polymorphism: 
+Polymorphism is considered as one of the important feature of object oriented programming.
+The word "poly" means many and "morphs" means forms. So it means many forms.
+It allows us to achieve a single action in different ways.
+
+
+i)Compile time poymorphism/static polymorphism:(Early Binding)
+
+ a)Method overloading: When there are multiple functions with the same name but different parameters
+ exists in a class it is said to be overloaded. Functions are overloaded by changing different numbers
+ of parameters/by changing different types of parameters.
+ 
+  
+ii)Run time polymorphism/dynamic polymorphism(late Binding)
+
+In this process call to an overridden methods of resolved at runtime rather than compile time. 
+
+i)Method overriding:
+In Java, overriding is a feature that allows a subclass to provide a specific implementation odf a method
+that is already present in the parent class.
+
+this keyword:
+this keyword refers to the current class object/instance.
+
+this keyword is used to refer to the current class i)instance variable ii)methods iii)constructors
+
+ q:->What is Polymorphism? 
+ q:->Explain Runtime and Compile time polymorphism.
+ q:->What is Method Overloading? What are the different ways to achieve method overloading?
+ q:->What is Method Overriding?
+ q:->What are the differences between overloading and overriding.
+ q:->Why operator overloading is not possible is Java?  
+ 
+ Multiple and Hybrid inheritance using interface.
+ abstract class.
+ 
+ Abstraction:
+ 
+ i)Interface:An interface in java is defined as an abstract type used to specify the 
+ behavior of a class.
+ An interface is a blueprint of a behavior.
+ 
+ Advantages:
+ i)It supports full abstraction.
+ ii)It supports Multiple inheritance
+ iii)It is used to achieve loose coupling(less dependency). 
+ 
+ 
+ 
+ interface Callable
+ {
+  //declare constant fields.
+  //declare abstract methods 
+  //default method
+  //static method
+ }
+ 
+ class CallableImplementation implements Callable
+ {
+ }
+ 
+ Important Points:
+ i)We can't create an instance of the interface but we can make a reference of it refers.
+ to the implementation class instance.
+ ii)A class can implement more than one interface.
+ iii)An interface can extend to another interface.
+ iv)All the methods inside the interface are public and abstract.
+ v)All the instance variable inside the interface are public static final by default.
+ vi)Inside interface constructor or main method not allowed.
+ vii)Inside interface static, private and default methods are allowed from Java 8 and java 9.
+  
+ 
+ ii)Abstract class:
+ An abstract class in Java is one that is declared with abstract keyword.
+ It may have abstract and non-abstract methods(methods with body).
+ 
+ abstract class test
+ {
+   //data members
+   //abstract methods
+   //non-abstract methods
+ }
+ 
+ Important points:
+ 
+ i)Abstract class can't be instantiated.
+ ii)Constructors are allowed.
+ iii)We can have abstract class with out abstract method.
+ iv)We can define static method inside abstract class.
+ 
+ 
+ Final keyword:
+ It is used to restrict the user from reinitializing a variable, inheriting a class or
+ overriding a method.
+ 
+ i)variable ii)class iii)method
+ 
+ 
+ Exception Handling:
+ 
+ Errors: Errors are nothing but problems/defects in the program.
+ 
+   Types of Errors : i)Runtime errors 
+    				 ii)Compile time errors 
+   					 iii)Syntax errors
+ 					 iv)Logical errors	
+ 					 
+  Exceptions:Exceptions are runtime errors that occur during the execution of a program.
+  In Java, exceptions are unwanted or unexpected events that occurs at runtime, and it
+  disrupts the normal flow of the execution. 
+  
+  
+  1 
+  2
+  3
+  4 - runtime error(terminated) - if exception id handled then rest of the code gets executed 
+  5
+  6
+  7
+  8
+  9
+  10					 
+  
+  reasons:
+  i)Wrong input data
+  ii)Device Failure
+  iii)File doesn't exist
+  iv)Physical Limitation(out-of-memory error, virtual memory error)
+  v)Code error		
+  
+  Error vs. Exception;
+  			 
+ 	Errors: An Error indicates a serious problem that a reasonable application should not try to catch.
+ 	Exception: Exception indicates conditions that a reasonable application should try to catch.
+ 	
+ 	Throwable -> Error, Exception   				 
+    
+    Exceptions -> 
+    	i)Checked Exceptions - reported at compile time by the compiler
+    	Checked exceptions are called compile-time exception because these exceptions are
+    	checked at compile time by the compiler.
+    	
+     	ii)Unchecked Exceptions - reported at runtime
+ 		Unchecked exceptions are just opposite to the checked exceptions.
+ 		the compiler will not check these exceptions at compile time.
+ 		
+    i)Try..catch..finally block	
+    
+    
+    try
+    {
+    
+    }
+    catch(Exception e )
+    {
+    	
+    }	
+    finally    //optional
+    {
+      //rest of the code 		 
+    }
+    
+    throw:It is used to throw any exception for any block explicitly.
+    
+    
+    
+    throws:It is used to declare the possible exceptions in a method.  
+  
+ 
+ 
+  
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+   
+ 
+  
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+

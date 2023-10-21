@@ -1,0 +1,37 @@
+Custom Exception:
+
+Student Management System
+ a)studentId - if valid shows the details of the student
+               if invalid program throws NullPointerException
+               
+      StudentIdNotFound      
+ b)studentId- string - i)RuntimeException   
+              i)InvalidStudentIdException  
+
+ 
+In Java, we can create our own exception classes for specific business logic runtime errors.
+Using Custom exception type we can define out own exception logic and custom message.
+
+
+try with resource closing 
+ 
+                  
+Exception Propagation:It is process in which the exception is being dropped down from the top to 
+the bottom of the stack.If not caught once, the exception again drops down to the previous method
+and so on until it gets caught or it reach the very bottom of the call stack.
+
+
+Q:->What is exception in Java?
+Q:->Difference between an exception and error.
+Q:->What are the different types of exception.Example
+Q:->What are the advantages of exception handling.
+Q:->what is exception propagation in Java?
+Q:->WHat are runtime exception in Java?
+Q:->What id the difference between throw and throws keyword?
+Q:->What is the use of finally block?
+Q:->What is the use of multi-catch block?
+Q:->What is catch with multiple exception types?
+Q:->How does JVM handles exception?
+Q:->What is try with resource?
+ 
+

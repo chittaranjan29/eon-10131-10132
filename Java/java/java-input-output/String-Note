@@ -1,0 +1,30 @@
+String:
+
+String is an object that represents a sequence of characters.
+Strings are immutable(Non updatable).
+
+i)Why strings are immutable?
+ii)What is string constant pool?
+iii)Is is possible to create a mutable string in java? 
+StringBuilder, StringBuffer
+
+Declaration:
+
+way 1: String st1=new String("hello World"); //heap memory
+
+way 2: String st2="hello World"; //constant pool
+
+st1="hello";
+st1="Hi";
+
+st3="Hello"
+String st=new String("Hi");
+st=new String("Hello");
+
+      st-> hello
+      
+      
+      
+String methods:
+      
+      

@@ -1,0 +1,19 @@
+Array:
+Java array is an object that contains similar data type.
+The elements of an array stored in contiguous memory location.
+
+Array is index based data structure.  
+size of the array is fixed.
+ 0  1  3   4  5  -indices
+[12,45,67,89,90]
+
+first index=0
+last index=length-1
+
+100 104 108 112 116
+
+
+Dimensional
+
+i)Single-dimensional
+ii)Two-dimensional 

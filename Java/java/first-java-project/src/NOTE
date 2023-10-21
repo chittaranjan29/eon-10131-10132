@@ -1,0 +1,208 @@
+Java:
+It is class based, object oriented programming language which is platform independent.
+
+Procedure Oriented Programming: C, Basic, Fortrain etc. 
+ i)Platform dependency 
+ ii)lack security 
+ iii)Complexity
+ 
+Object Oriented Programming: Java (1995)  - Green Team - James Gosling - oak, silk etc. - Sun Microsystem
+Oracle Corporation
+ 
+ Features:
+  i)Platform independent(WORA - Write Once Run Anywhere).
+  ii)Highly Secured.
+  iii)Distributed.
+  iv)Portable.
+  v)Multithreading.
+  vi)High Performance.
+  vii)Robust(Grabage Collection, Exception Handling and memory Allocation)
+  
+  Compile and interpreted
+  
+  JDK=JRE + Runtime Libraries + Dev tools(javac, java, javadoc)
+  
+  Application:
+  i)Standalone application.(CUI app or GUI app)
+  ii)Desktop/GUI application.
+  iii)Simple Web application.(MVC)
+  iv)Enterprise Application.(REST API, Microservices etc)
+  
+  
+  Editions:
+  
+  i)Java SE - Standard Edition
+  ii)Java EE - Enterprise Edition(jsp, Servlet, JSTL, Java Beans etc)
+  iii)Java ME - Micro Edition
+  iv)Java FX - Rich internet app.
+  
+  
+  Compile - javac Test.java    -> Test.class(Byte code)
+  Run - java Test
+  
+  Test.java -> compile -> Test.class ->execute
+  
+  JDK - Java Development Kit
+  JVM - Java Virtual Machine(Platform independent)
+  JRE - Java Runtime Environment(Runtime Library)
+  
+  Jar files - packages, sub packages, compiled classes.
+  Development tools : javac, java, javap, javaw, javadoc, applet etc.
+  
+  
+  net.java - jar
+  date.java
+  
+  Variables: Variables are just like containers used to store values into
+  memory location.
+ 
+  data Types:
+  int a;
+  float b;
+  double g;
+  long b;
+  short d;
+  String st;
+  char ch;
+  boolean b;
+  
+  
+  Java identifiers:
+  In programming languages, identifiers are used for identification purposes.
+  In Java, an identifier can be a class name, method name, variable name or label.
+  
+  class Test
+  {
+  	public static void main(String args[])
+  	{
+  		int a =20;
+  	}
+  } 
+  
+  identifiers: Test, main, args, a, String 
+  
+  Identifier naming conventions:
+  i)The only allowed characters for identifiers are all alphanumeric characters([A-Z],[a-z],[0-9]), $(dollar sign),
+  and '_'(underscore).
+  ii)Identifiers should not start with digits. 
+  iii)Java identifiers are case sensitive.
+  iv)Reserved keywords can not be used as an identifier. 
+  
+  Valid identifier names: MyVariable, MYVARIABLE, myvariable, x, i, x1, _myvariable, $myvariable
+  sum_of_array, a123
+  
+  Invalid identifier names: My Variable, 123variable, a+b, variable-2, sum_&_difference
+  
+  
+  
+  Reserved Keywords: 53 reserved keywords.
+  Any programming language reserves some words to represent functionalities defined by the language.
+  These words are called reserved keywords.
+  
+  example: package, class, switch, break, for, while etc.
+  
+  Operators:
+  Operators are the symbols used for performing specific operation in Java. 
+  
+  examle: int a=10;  // = assignment operator
+          int result=a+b;// + addition  
+          
+          // result, a , b - operands
+          // +,=   - operators
+          
+ based on operation type:
+ i)Arithmetic Operators(+, -, *, /)
+ ii)Assignment operators(=, +=, -=,*=, /=)
+ iii)Relational operators(>,<,>=,<=, ==,!=)
+ iv)Logical operators(&&, ||, !)    a>b && a>0, A!=0
+ v)Bitwise operators(&, |,^,~)
+ vi)Shift Operator(>>,>>>,<<)
+ 
+ 
+ based on Number of operands works with:
+ i)Unary operators(single operand) : ex: a++, --a, --b,b--, ++b(post/pre increment, post/pre decrement )
+ ii)Binary operators(two operands) : a+b, a*b, a/b
+ iii)Ternary operator/Conditional: (three operands)  
+ 
+ int a=10,b=20;
+ int result=(a>b)?a:b;     
+ 
+ (expression)?true value: false value;  
+ 
+ 
+ Decision making in Java:
+ 
+ Decision making Java is similar to decision making in real life.
+ In programming also we face some situations where we want to execute a block of code 
+ when some condition is fulfilled. Decision making statements are also called
+ control flow statements.
+ 
+ i)if 
+ ii)if-else 
+ iii)Nested if else 
+ iv)if-elseif-else 
+ v)switch - menu driven program
+ vi)jump statements(break, continue)
+ 
+ Q:> WAP in Java to find out the minimum number among three numbers.
+ 
+ Loops:A block of code gets executed repeatedly until and unless a condition is satisfied.
+ 
+ a)Entry controlled: for, foreach, while
+ b)Exit controlled: do-while
+ 
+ i)for
+   for(initialization;expression;value updation)
+   {
+   	body of the loop;
+   }
+ 
+ ii)foreach (Java 8)
+ 
+ list.foreach(x -> sysout(x))
+ 
+ iii)while
+ 
+   while(expression)
+   {
+     body;
+   }
+ 
+ 
+ iv)do-while
+ 
+ do
+ {
+ 
+   body;
+ }
+ while(expression);
+ 
+ Series:
+ WAP in Java to print the terms of the below series using loop.
+ 1, 4, 9, 16, 25, 36, 49, .... 100
+ 
+   
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+     

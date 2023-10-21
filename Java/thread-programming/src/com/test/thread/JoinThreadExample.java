@@ -1,48 +1,34 @@
 package com.test.thread;
-
-
-class SampleThread1 extends Thread
+class Print extends Thread
 {
+	
 	public void run()
 	{
 		for(int i=1;i<=100;i++)
 		{
-			System.out.println(Thread.currentThread().getName()+":"+ i);
+			System.out.println(Thread.currentThread().getName()+" "+i);
 		}
 	}
 }
-class SampleThread2 extends Thread
-{
-	public void run()
-	{
-		for(int i=1;i<=100;i++)
-		{
-			System.out.println(Thread.currentThread().getName()+":"+ i);
-		}
-	}
-}
+
+
+
 public class JoinThreadExample {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
-		SampleThread1 thread1=new SampleThread1();
-		SampleThread2 thread2=new SampleThread2();
+		Print t1=new Print();
+		Print t2=new Print();
+		Print t3=new Print();
 		
-		thread1.start();
+		t1.start();
 		
-		try 
-		{
-			thread1.join(2000);
-		}
-		catch (InterruptedException e)
-		{
-			
-			e.printStackTrace();
-		}
+		t1.join();
 		
+		t2.start();
 		
-		thread2.start();
-		
+		t2.join();
+		t3.start();
 	}
 
 }

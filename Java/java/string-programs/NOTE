@@ -1,0 +1,32 @@
+WAP to check if a given string is palindrome or not.
+
+A string is called palindrome if the reverse of the string is the same as 
+the original one.
+
+input : racecar
+        racecar
+        
+        madam
+        madam
+        
+        malayalam
+        malayalam
+        
+WAP to find out all the available Palindrome words present in a given string.        
+
+length, charAt, equals, toLowerCase, toUpperCase, replace, substring, concat
+
+isEmpty():
+split:
+
+
+String object are immutable.
+
+
+String st=new String("Hello");
+String st="Hello";
+String st1="Hello";
+st1="hi";
+
+
+StringBuffer, StringBuilder
